@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -55,6 +56,9 @@ dependencies {
     implementation androidLibs.values()
     implementation kotlinLibs.values()
     kapt androidKaptLibs.values()
+
+    implementation platform('com.google.firebase:firebase-bom:30.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 
     testImplementation testLibs.values()
     testImplementation androidxTestLibs.values()
