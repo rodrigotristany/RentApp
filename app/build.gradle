@@ -53,14 +53,28 @@ dependencies {
     implementation project(":data")
     implementation project(":domain")
 
-    implementation androidLibs.values()
-    implementation kotlinLibs.values()
-    kapt androidKaptLibs.values()
+    //Android
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.4.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
 
+    //Compose
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation "androidx.compose.material:material-icons-extended:$compose_version"
+    implementation 'androidx.activity:activity-compose:1.4.0'
+    implementation "androidx.navigation:navigation-compose:2.4.2"
+
+    //Google
+    implementation 'com.google.android.material:material:1.6.0'
     implementation platform('com.google.firebase:firebase-bom:30.1.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
-    testImplementation testLibs.values()
-    testImplementation androidxTestLibs.values()
-    androidTestImplementation androidTestLibs.values()
+    //Third party
+    implementation "io.coil-kt:coil-compose:2.1.0"
+    implementation 'io.insert-koin:koin-android:3.1.2'
+
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 }
