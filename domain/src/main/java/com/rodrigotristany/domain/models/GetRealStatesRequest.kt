@@ -1,6 +1,6 @@
 package com.rodrigotristany.domain.models
 
-sealed class GetRealStatesRequest(
+class GetRealStatesRequest(
     page : Int,
     size : Int,
     orderBy : String
